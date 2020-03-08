@@ -1,0 +1,24 @@
+0.  An artificial long word said to mean a lung disease caused by inhaling by fine ash and sand dust.  Also the longest
+    published in an English language dictionary.
+1.  It returns a measure of the resources used by either the process calling the function, the children of the process
+    which have terminated and been waited for, or the calling thread.
+2.  16
+3.  If we passed the arguments to the function by value, it would require the program to make another copy of each struct
+    argument everytime the function was called.  Because it is meant to measure performance, it should run with as little
+    overhead as possible.
+4.  First, the program runs the load function to load the dictionary into memory. Then the program loops through the
+    dictionary file character by character, increasing an index value per each iteration by which it appends each character
+    to a word variable until it hits the null terminator, after which point the rest of the string is consumed. The word
+    variable is compared to the dictionary data structure, and boolean value specifying whether or not it was misspelled is
+    returned, after which the process begins again with the next word.
+5.  fscanf could cause buffer overflows by scanning a word larger than the size of the word variable before it is checked
+    inside the loop.
+6.  The purpose of the program is to compare words to the dictionary structure that does not change, so it serves as a
+    note to the compiler that it can treat the return values as constants for optimization and error-checking purposes
+7.  A trie consisting of a boolean indicating whether or not a word ends at that node, and a struct pointer to an array
+    of 27 identical nodes whose memory address values are initialized to 0.
+8.  My program spent .08 seconds in load, .01 seconds in check, .00 seconds in time, and .06 seconds in unload, adding
+    up to .14 seconds total the first time I got it working.
+9.  My results were very similar to that of the staff solution, so I did not feel the need to optimize it, although
+    figuring out how to free the memory properly was very difficult.
+10. No
